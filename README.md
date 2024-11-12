@@ -31,6 +31,21 @@ curl -X POST \
   -F "file=@path/to/your/file"
 ```
 
+**Example using curl for GET orders:**
+
+> It's possible to use filters:
+>
+> - user id: _userId_
+> - start date: _startDate_
+> - end date: _endDate_
+
+```bash
+curl -X GET \
+ http://localhost:3000/api/orders \
+ -H "Content-Type: application/json" \
+ -d '{"userId": <user_id>, "dateFrom": "<start_date>", "dateTo": "<end_date>}'
+```
+
 **To install Bun:**
 
 - Download: Go to the official Bun website [bun](https://bun.sh/) and download the installer for your operating system.
